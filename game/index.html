@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lantern Lane — Spot the Difference</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header id="top-bar">
+  <div class="brand">
+    <h1>Lantern Lane</h1>
+    <p class="tagline">Spot the difference</p>
+  </div>
+  <div class="hud">
+    <div class="hud-item hud-set"><span id="set-name">Harbour Dawn</span><span id="set-blurb"></span></div>
+    <div class="hud-item hud-remaining"><span id="remaining-count">6</span> to go</div>
+    <div class="hud-item">Found <span id="found-count">0</span> of <span id="total-count">6</span></div>
+    <div class="hud-item">Clock <span id="timer">4:00</span></div>
+    <div class="hud-item">Hints <span id="hints-left">3</span></div>
+  </div>
+</header>
+
+<main id="stage">
+  <section class="panel-wrap">
+    <h2>Original</h2>
+    <canvas id="left-panel" width="520" height="520"></canvas>
+  </section>
+  <section class="panel-wrap">
+    <h2>Find the changes</h2>
+    <canvas id="right-panel" width="520" height="520"></canvas>
+  </section>
+  <div id="overlay" hidden>
+    <p id="overlay-text"></p>
+    <button id="overlay-button" type="button">Next set</button>
+  </div>
+</main>
+
+<footer id="controls">
+  <nav id="set-tabs">
+    <button type="button" data-set="0">1 · Harbour Dawn</button>
+    <button type="button" data-set="1">2 · Market Day</button>
+    <button type="button" data-set="2">3 · Lantern Night</button>
+  </nav>
+  <p id="message">Click a difference in either picture.</p>
+  <div class="actions">
+    <button id="hint-button" type="button">Hint (H)</button>
+    <button id="restart-button" type="button">Restart (R)</button>
+  </div>
+</footer>
+
+<script type="module" src="src/main.js"></script>
+</body>
+</html>
